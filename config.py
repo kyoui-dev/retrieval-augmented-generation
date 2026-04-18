@@ -8,3 +8,6 @@ DB_CONFIG = {
     "user": os.getenv("DB_USER"),
     "password": os.getenv("DB_PASSWORD")
 }
+
+# openai
+EMBEDDING_MODEL_NAME = "text-embedding-3-small"
