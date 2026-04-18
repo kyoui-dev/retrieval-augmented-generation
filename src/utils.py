@@ -2,8 +2,9 @@ import psycopg
 from psycopg import Connection
 from pgvector.psycopg import register_vector
 from openai import OpenAI
+from sentence_transformers import CrossEncoder
 
-from config import DB_CONFIG, EMBEDDING_MODEL_NAME
+from config import DB_CONFIG, EMBEDDING_MODEL_NAME, CROSS_ENCODER_MODEL_NAME
 
 
 def get_connection() -> Connection:
@@ -30,3 +31,7 @@ def get_embeddings(client: OpenAI, texts: list[str]) -> list[list[float]]:
         input=texts,
     )
     return [item.embedding for item in response.data]
+
+
+def load_cross_encoder() -> CrossEncoder:
+    return CrossEncoder(CROSS_ENCODER_MODEL_NAME)

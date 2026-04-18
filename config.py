@@ -11,3 +11,6 @@ DB_CONFIG = {
 
 # openai
 EMBEDDING_MODEL_NAME = "text-embedding-3-small"
+
+# hugging face
+CROSS_ENCODER_MODEL_NAME = "cross-encoder/ms-marco-MiniLM-L-6-v2"
