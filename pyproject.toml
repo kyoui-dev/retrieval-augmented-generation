@@ -5,5 +5,7 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
+    "pgvector>=0.4.2",
+    "psycopg[binary]>=3.3.3",
     "pypdf>=6.10.2",
 ]
